@@ -1,0 +1,55 @@
+ //Verilmis array-deki reqemlerinin cemi 10-dan kicik olan ededlerin sayini tapan alqoritm
+
+int[] array = {23, 43, 12, 78, 54, 64, 89, 53};
+int reqem,sum,count=0;
+for(int i=0;i<array.length;i++)
+{
+   sum=0;
+   while(array[i]>0)
+   { 
+      reqem = array[i]%10;
+      sum+=reqem;
+      array[i]/=10;
+   }
+   if(sum<10)
+     count++;
+}
+ Console.Writeline(count);
+
+
+ //1-den 8000-dek ededler icerisinde cut olanlarin sayini tapan proqram
+
+ int count=0;
+ for(int i=1;i<=8000;i++)
+{
+  if(i%2==0)
+    count++;
+}
+ Console.WriteLine(count);
+
+
+
+//Verilmis ededin en yaxin asagi kokalti deyerini tapan alqoritm
+int numb=27;
+if(numb==0 || numb==1)  
+{ 
+  Console.WriteLine(numb);
+  break;
+}
+int k=0;
+while(k<1)
+{
+ for(int i=1;i<=numb/2;i++)
+ {
+   if(i*i>numb)
+   {  
+     Console.WriteLine(i-1);
+     k++;
+   }
+   else if(i*i==numb)
+    {
+     Console.WriteLine(i);
+     k++;
+    }  
+  }
+}   
